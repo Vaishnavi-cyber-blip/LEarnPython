@@ -19,13 +19,10 @@ class Library:
         name = input()
         # d1 = {}
         print("Which book you want to lend?")
-        take = input().lower()
-        if take in self.list_of_books:
-            print(f"Now {name} is the owner of book: {take}")
-            # d2 = {name: take}
-            # d1.update(d2)
-            # print(d1)
-            self.list_of_books.remove(take)
+        book = input().lower()
+        if book in self.list_of_books:
+            print(f"Now {name} is the owner of book: {book}")
+            self.list_of_books.remove(book)
         else:
             print("Currently not available")
 
